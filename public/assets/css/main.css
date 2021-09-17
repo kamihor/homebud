@@ -98,7 +98,7 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.75);
+		color: rgb(255, 255, 255);
 		font-family: "Roboto", Helvetica, sans-serif;
 		font-size: 15pt;
 		font-weight: 100;
@@ -137,7 +137,7 @@ input, select, textarea {
 		color: #ffffff;
 		font-weight: 300;
 		line-height: 1em;
-		margin: 0 0 0.25em 0;
+		margin: 0 0 0em 0;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -632,7 +632,7 @@ input, select, textarea {
 /* Container */
 
 	.container {
-		margin: 10em auto;
+		margin: 7em auto;
 		max-width: calc(100% - 4em);
 		width: 70em;
 	}
@@ -736,7 +736,7 @@ input, select, textarea {
 		}
 
 		.row > .off-2 {
-			margin-left: 16.66667%;
+			margin-left: 85%;
 		}
 
 		.row > .col-3 {
@@ -2240,7 +2240,7 @@ input, select, textarea {
 		padding: 0 1em;
 		text-decoration: none;
 		width: 100%;
-                margin-top: 1em;
+                margin-bottom: 1em;
 	}
 
 		input[type="text"]:invalid,
@@ -2270,7 +2270,6 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #ffffff;
 			background: #1c1d26;
 		}
 

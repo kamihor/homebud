@@ -16,8 +16,8 @@ class RegisterCtrl {
     public function action_register() {
 		        
         $this->data=App::getDB()->select("register",[
-            "[>]user"=>["idtransaction"=>"iduser"],
-            "[>]category"=>["idtransaction"=>"idcategory"]
+            "[>]user" => ["iduser" => "iduser"],
+            "[>]category" => ["idcategory" => "idcategory"]
         ],[
             "register.idtransaction",
             "register.amount",
@@ -27,6 +27,9 @@ class RegisterCtrl {
             "register.createdate"
         ]);
 
+        
+ //        $this->data=App::getDB()->select("register",["idtransaction","amount","iduser","idcategory","description","createdate"]);
+        
         $this->generateView();
         
     }

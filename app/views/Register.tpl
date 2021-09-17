@@ -30,6 +30,13 @@
 
 {block name=content}  
 
+    
+    <div class="container">
+                    <header class="major">
+                        <h2>Rejestr transakcji</h2>
+                    </header>
+                </div>
+    
 <div class="table-wrapper" style="margin: 10em">
     <table id="register" class="pure-table pure-table-bordered">
 <thead>
@@ -54,8 +61,8 @@
 		<td>{$d["description"]}</td>
 		<td>{$d["createdate"]}</td>
                 <td>
-                <a class="abutton primary" href="{$conf->action_url}logout" >Edytuj</a>
-                <a class="abutton primary" href="{$conf->action_url}logout" >Usuń</a>
+                <a class="abutton primary" href="{$conf->action_url}transactionEdit/{$d['idtransaction']}" >Edytuj</a>
+                <a class="abutton primary" href="{$conf->action_url}transactionDelete/{$d['idtransaction']}" >Usuń</a>
           
 </td>
 	</tr>
@@ -63,6 +70,16 @@
 {/foreach}
 </tbody>
 </table>
+
+<div class="row">
+        <div class="col-6 col-12-xsmall">
+            {include file='messages.tpl'}
+        </div>
+        <div class="col-6 col-12-xsmall"  style="padding-left: 30em">
+             <a class="button primary" href="{$conf->action_url}transactionNew" >Nowa</a>
+        </div>
+</div>
+    
     </div>
 
 {/block}

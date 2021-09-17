@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-09-13 19:39:04
+/* Smarty version 3.1.34-dev-7, created on 2021-09-17 18:02:52
   from 'D:\xampp\htdocs\homebud\app\views\templates\messages.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_613f8cb8861204_07787607',
+  'unifunc' => 'content_6144bc2c359036_04706339',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c06bc517d741824c753224eaea2822e96decfdcc' => 
     array (
       0 => 'D:\\xampp\\htdocs\\homebud\\app\\views\\templates\\messages.tpl',
-      1 => 1631554737,
+      1 => 1631894445,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_613f8cb8861204_07787607 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6144bc2c359036_04706339 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['msgs']->value->getMessages(), 'msg');
 $_smarty_tpl->tpl_vars['msg']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['msg']->value) {

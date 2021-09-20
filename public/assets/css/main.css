@@ -35,6 +35,7 @@ body {
 
 ol, ul {
 	list-style: none;
+        
 }
 
 blockquote, q {
@@ -724,7 +725,8 @@ input, select, textarea {
 		}
 
 		.row > .col-1 {
-			width: 8.33333%;
+                        right:0px;
+                        position: absolute;
 		}
 
 		.row > .off-1 {
@@ -2577,23 +2579,27 @@ input, select, textarea {
 		}
 
 	ul {
-		list-style: disc;
-		margin: 0 0 2em 0;
-		padding-left: 1em;
+		list-style: none;
+                
+		margin: 0 0 0 0;
+		padding: 0;
 	}
 
 		ul li {
-			padding-left: 0.5em;
+			padding-right: 0.5em;
+                        display: inline-block;
+
 		}
 
 		ul.alt {
 			list-style: none;
-			padding-left: 0;
+			padding-left: 1em;
 		}
 
 			ul.alt li {
-				border-top: solid 1px rgba(255, 255, 255, 0.3);
-				padding: 0.5em 0;
+				padding-right: 1em;
+                                font-size: 24px;
+                                
 			}
 
 				ul.alt li:first-child {
@@ -2758,8 +2764,8 @@ input, select, textarea {
 	}
 
 	table {
-		margin: 0 0 2em 0;
 		width: 100%;
+                margin-bottom: 2em;
 	}
 
 		table tbody tr {
@@ -3047,6 +3053,123 @@ input, select, textarea {
 			cursor: default;
 			opacity: 0.25;
 		}       
+                
+               /* bButton */
+
+                
+                input[type="bsubmit"],
+	input[type="breset"],
+	input[type="bbutton"],
+	.bbutton {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		background-color: transparent;
+		border-radius: 4px;
+		border: 0;
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+		color: #ffffff !important;
+		cursor: pointer;
+		display: inline-block;
+		font-weight: 300;
+		height: 3em;
+		line-height: 3em;
+		padding: 0 2.25em;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+		input[type="bsubmit"]:hover, input[type="bsubmit"]:active,
+		input[type="breset"]:hover,
+		input[type="breset"]:active,
+		input[type="bbutton"]:hover,
+		input[type="bbutton"]:active,
+		.bbutton:hover,
+		.bbutton:active {
+			box-shadow: inset 0 0 0 1px #000000;
+			color: #000000 !important;
+		}
+
+		input[type="bsubmit"]:active,
+		input[type="breset"]:active,
+		input[type="bbutton"]:active,
+		.bbutton:active {
+			background-color: rgba(228, 76, 101, 0.15);
+		}
+
+		input[type="bsubmit"].icon:before,
+		input[type="breset"].icon:before,
+		input[type="bbutton"].icon:before,
+		.bbutton.icon:before {
+			margin-right: 0.5em;
+		}
+
+		input[type="bsubmit"].fit,
+		input[type="breset"].fit,
+		input[type="bbutton"].fit,
+		.bbutton.fit {
+			width: 100%;
+		}
+
+		input[type="bsubmit"].small,
+		input[type="breset"].small,
+		input[type="bbutton"].small,
+		.bbutton.small {
+			font-size: 0.8em;
+		}
+
+		input[type="bsubmit"].large,
+		input[type="breset"].large,
+		input[type="bbutton"].large,
+		.bbutton.large {
+			font-size: 1.35em;
+		}
+                
+                input[type="bsubmit"].primary,
+		input[type="breset"].primary,
+		input[type="bbutton"].primary,
+		.bbutton.primary {
+			background-color: #1c1d26;
+			box-shadow: #5480f1;
+			color: #ffffff !important;
+                        font-size: 0.8em;
+                        padding-right: 1em;
+                        padding-left: 1em;
+		}
+                
+                input[type="bsubmit"].primary:hover,
+			input[type="breset"].primary:hover,
+			input[type="bbutton"].primary:hover,
+			.bbutton.primary:hover {
+				background-color: #3053f0;
+			}
+
+			input[type="bsubmit"].primary:active,
+			input[type="breset"].primary:active,
+			input[type="bbutton"].primary:active,
+			.bbutton.primary:active {
+				background-color: #e13652;
+			}
+
+		input[type="bsubmit"].disabled, input[type="bsubmit"]:disabled,
+		input[type="breset"].disabled,
+		input[type="breset"]:disabled,
+		input[type="bbutton"].disabled,
+		input[type="bbutton"]:disabled,
+		.bbutton.disabled,
+		.bbutton:disabled {
+			background-color: rgba(255, 255, 255, 0.3) !important;
+			box-shadow: none !important;
+			color: #ffffff !important;
+			cursor: default;
+			opacity: 0.25;
+		}    
                 
 /* Goto Next */
 
@@ -3515,17 +3638,18 @@ input, select, textarea {
 		}
 
 		#header nav {
-			position: absolute;
 			right: 1em;
 			top: 0;
 		}
 
 			#header nav ul {
 				margin: 0;
+                                
 			}
 
 				#header nav ul li {
 					display: inline-block;
+                                        
 					margin-left: 1em;
 				}
 
@@ -3536,16 +3660,18 @@ input, select, textarea {
 						height: inherit;
 						line-height: inherit;
 						outline: 0;
+                                                
 					}
 
 						#header nav ul li a.button, #header nav ul li span.button {
 							height: 2em;
 							line-height: 2em;
 							padding: 0 1.25em;
+                                                        
 						}
 
 						#header nav ul li a:not(.button):before, #header nav ul li span:not(.button):before {
-							margin-right: 0.5em;
+							margin-right: 0em;
 						}
 
 					#header nav ul li.active > a, #header nav ul li.active > span {
@@ -3554,7 +3680,11 @@ input, select, textarea {
 
 					#header nav ul li > ul {
 						display: none;
+                                                
 					}
+                                        
+                                        
+                                        
 
 	body.landing #page-wrapper {
 		padding-top: 0;
@@ -3651,6 +3781,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
+            margin-top: 10em;
 		background: #272833;
 		padding: 6em 0;
 		text-align: center;

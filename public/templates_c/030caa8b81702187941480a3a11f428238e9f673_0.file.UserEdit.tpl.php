@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-09-18 16:31:52
-  from 'D:\xampp\htdocs\homebud\app\views\TransactionEdit.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2021-09-18 16:31:42
+  from 'D:\xampp\htdocs\homebud\app\views\UserEdit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6145f858ce0547_73952308',
+  'unifunc' => 'content_6145f84eb399b9_97503433',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '1a2026fbafe314b631cd8aad8545659eebe149fb' => 
+    '030caa8b81702187941480a3a11f428238e9f673' => 
     array (
-      0 => 'D:\\xampp\\htdocs\\homebud\\app\\views\\TransactionEdit.tpl',
-      1 => 1631975475,
+      0 => 'D:\\xampp\\htdocs\\homebud\\app\\views\\UserEdit.tpl',
+      1 => 1631975491,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:messages.tpl' => 1,
   ),
 ),false)) {
-function content_6145f858ce0547_73952308 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6145f84eb399b9_97503433 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -29,16 +29,16 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18748313636145f858cc9bd5_59701070', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13942418926145f84eb21b05_84578188', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_18748313636145f858cc9bd5_59701070 extends Smarty_Internal_Block
+class Block_13942418926145f84eb21b05_84578188 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_18748313636145f858cc9bd5_59701070',
+    0 => 'Block_13942418926145f84eb21b05_84578188',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -47,38 +47,39 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     
         <div class="container">
                     <header class="major">
-                        <h2>Dane transakcji</h2>
+                        <h2>Dane użytkownika</h2>
                     </header>
                 </div>
 
     <div class="container">
         <section>
             <form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-transactionSave" method="post">
+userSave" method="post">
                 <fieldset>
                 <div class="form">
-                    <h4>Kwota</h4>
-                    <input type="text" name="amount" id="amount" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->amount;?>
-" placeholder="Kwota" />
+                    <h4>Nazwa</h4>
+                    <input type="text" name="username" id="username" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->username;?>
+" placeholder="Nazwa użytkownika" />
                     
-                    <h4>Kategoria</h4>
-                    <select name="category" id="category" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->category;?>
+                    <h4>Hasło</h4>
+                    <input type="password"  name="password" id="password" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->password;?>
+" placeholder="Hasło" />
+                    
+                    <h4>Rola</h4>
+                    <select name="role" id="role" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->role;?>
 ">        
                     <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categories']->value, 'c');
-$_smarty_tpl->tpl_vars['c']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['c']->value) {
-$_smarty_tpl->tpl_vars['c']->do_else = false;
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['roles']->value, 'r');
+$_smarty_tpl->tpl_vars['r']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['r']->value) {
+$_smarty_tpl->tpl_vars['r']->do_else = false;
 ?>
-			<option ><?php echo $_smarty_tpl->tpl_vars['c']->value;?>
+			<option ><?php echo $_smarty_tpl->tpl_vars['r']->value;?>
 </option>
                          <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     </select>
-                    <h4>Opis</h4>
-                    <input type="text"  name="description" id="description" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->description;?>
-" placeholder="Opis" />
                     <ul class="actions">
                         <li><input style="margin-top: 1em;" type="submit" value="Zapisz" class="primary" /></li>
                     </ul>

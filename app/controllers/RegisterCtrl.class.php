@@ -52,7 +52,7 @@ class RegisterCtrl {
         } else {
             $where = &$search_params;
         }
-
+       
         //unikniecie ujemnego nr strony dla stronnicowania
         if ($this->page < 1) {
             $this->page = 0;
